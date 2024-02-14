@@ -63,7 +63,7 @@
             </tr>
           </tbody></table>
 
-          <!-- Publication Title -->
+          <!-- Publications -->
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
               <td style="padding:20px;width:100%;vertical-align:middle">
@@ -71,14 +71,11 @@
               </td>
             </tr>            
           </tbody></table>
-
-
-          <!-- Paper -->
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
             <tr>
               <td align="center" style="padding:20px;width:25%;vertical-align:middle">
-                <img src="images\tokencompose.png" width="160">
+                <img src="images/tokencompose.png" width="160">
               </td>
               <td width="75%" valign="middle">
                 <span class="papertitle">TokenCompose: Grounding Diffusion with Token-level Supervision</span>
@@ -101,7 +98,7 @@
 
             <tr>
               <td align="center" style="padding:20px;width:25%;vertical-align:middle">
-                <img src="images\omnicontrolnet.png" width="160">
+                <img src="images/omnicontrolnet.png" width="160">
               </td>
               <td width="75%" valign="middle">
                 <span class="papertitle">OmniControlNet: Dual-stage Integration for Conditional Image Generation</span>
@@ -115,6 +112,41 @@
               </td>
             </tr>
           </tbody></table>
+
+
+          <!-- Projects -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:20px;width:100%;vertical-align:middle">
+                <h2>Project</h2>
+              </td>
+            </tr>            
+
+          </tbody></table>
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+            <tr>
+              <td align="center" style="padding:20px;width:25%;vertical-align:middle">
+                <!-- <img src="images\pbrs_h1.mp4" width="160"> -->
+                <video id="pbrs_h1_video" width="160" autoplay controls loop>
+                  <source src="images/pbrs_h1.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </td>
+              <td width="75%" valign="middle">
+                <span class="papertitle">PBRS algorithm for Unitree H1 Robot</span>
+                <br>
+                <a href="https://jamessand.github.io/PBRS-H1/">website</a>
+                <p>
+                  Implement the <a href="https://github.com/se-hwan/pbrs-humanoid">PBRS algorithm</a> specifically tailored for the Unitree H1 Robot. Enable the H1 Robot to walk following given linear velocity and angular velocity commands without falling.
+                </p>
+              </td>
+            </tr>
+
+          </tbody></table>
+
+
+
 
           <!-- Footnote -->
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
@@ -136,4 +168,11 @@
       </tr>
     </table>
   </body>
+
+  <script>
+    // set pbrs h1 video play speed to 2.0
+    let vid = document.getElementById("pbrs_h1_video");
+    vid.playbackRate = 2.0;
+  </script> 
+
 </html>
