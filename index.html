@@ -1,301 +1,744 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Zhizhou Sha</title>
 
     <meta name="author" content="Zhizhou Sha">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Zhizhou Sha is a Ph.D. student in Computer Science at The University of Texas at Austin, working on LLM post-training, reinforcement learning, quantization, and agentic systems.">
     <link rel="shortcut icon" href="images/favicon/one_piece.jpg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,500;6..72,700&display=swap">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    
   </head>
 
-  <body>
-    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-      <tr style="padding:0px">
-        <td style="padding:0px">
-          <!-- Personal Information -->
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr style="padding:0px">
-              <td style="padding:2.5%;width:63%;vertical-align:middle">
-                <p class="name" style="text-align: center;">
-                  Zhizhou Sha
-                </p>
-                <p>
+  <body id="top">
+    <!-- Icons -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+      <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55v-1.93c-3.2.7-3.87-1.54-3.87-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.41-5.26 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.66.79.55A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></symbol>
+      <symbol id="i-scholar" viewBox="0 0 24 24"><path fill="currentColor" d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></symbol>
+      <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></symbol>
+      <symbol id="i-wechat" viewBox="0 0 24 24"><path fill="currentColor" d="M9.2 3.5C4.9 3.5 1.4 6.4 1.4 10c0 2 1.1 3.8 2.9 5l-.7 2.3 2.6-1.4c.9.3 1.9.4 3 .4h.5a5.6 5.6 0 0 1-.2-1.5c0-3.5 3.3-6.2 7.4-6.2h.5C16.8 5.5 13.3 3.5 9.2 3.500zM6.7 8.900a1 1 0 1 1 0-2.1 1 1 0 0 1 0 2.100zm5 0a1 1 0 1 1 0-2.1 1 1 0 0 1 0 2.100z"/><path fill="currentColor" d="M22.6 14.800c0-2.9-2.8-5.2-6.3-5.200s-6.3 2.3-6.3 5.2 2.8 5.2 6.3 5.200c.8 0 1.5-.1 2.2-.3l2 1.1-.5-1.800c1.6-1 2.6-2.5 2.6-4.200zm-8.3-.8a.85.85 0 1 1 0-1.7.85.85 0 0 1 0 1.700zm4.1 0a.85.85 0 1 1 0-1.7.85.85 0 0 1 0 1.700z"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 6.500A1.5 1.5 0 0 1 4.5 5h15A1.5 1.5 0 0 1 21 6.500v11a1.5 1.5 0 0 1-1.5 1.500h-15A1.5 1.5 0 0 1 3 17.500v-11zM3.5 6.5 12 13l8.5-6.5"/></symbol>
+    </svg>
 
-                Hi! I am Zhizhou Sha, a first-year Ph.D. student in Computer Science at the University of Texas at Austin. 
+    <!-- Header -->
+    <header class="site-header">
+      <nav class="container nav" aria-label="Primary navigation">
+        <a class="brand" href="#top" aria-label="Zhizhou Sha home">
+          <span class="brand-mark" aria-hidden="true"><img src="images/favicon/one_piece.jpg" alt="" width="38" height="38"></span>
+          <span class="brand-text"><span class="en">Zhizhou Sha</span><span class="zh">沙之洲</span></span>
+        </a>
+        <div class="nav-end">
+          <div class="header-social" aria-label="Social links">
+            <a class="social-icon-link" href="https://github.com/JamesSand" aria-label="GitHub" title="GitHub" target="_blank" rel="noopener noreferrer"><svg width="18" height="18"><use href="#i-github"/></svg></a>
+            <a class="social-icon-link" href="https://scholar.google.com/citations?user=eAObdYgAAAAJ" aria-label="Google Scholar" title="Google Scholar" target="_blank" rel="noopener noreferrer"><svg width="18" height="18"><use href="#i-scholar"/></svg></a>
+            <a class="social-icon-link" href="https://www.linkedin.com/in/zhizhou-sha-017403280/" aria-label="LinkedIn" title="LinkedIn" target="_blank" rel="noopener noreferrer"><svg width="17" height="17"><use href="#i-linkedin"/></svg></a>
+            <a class="social-icon-link" href="data/wechat.jpg" aria-label="WeChat" title="WeChat" target="_blank" rel="noopener noreferrer"><svg width="18" height="18"><use href="#i-wechat"/></svg></a>
+            <a class="social-icon-link" href="mailto:shazhizhou0@gmail.com" aria-label="Email" title="Email"><svg width="18" height="18"><use href="#i-mail"/></svg></a>
+          </div>
+          <div class="language-switch" role="group" aria-label="Language" translate="no">
+            <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
+            <button type="button" data-set-lang="zh" aria-pressed="false">中文</button>
+          </div>
+          <div class="nav-links">
+            <a href="#top" class="is-current"><span class="en">Home</span><span class="zh">首页</span></a>
+            <a href="#research-highlights"><span class="en">Research</span><span class="zh">研究</span></a>
+            <a href="#selected-publications"><span class="en">Publication</span><span class="zh">论文</span></a>
+            <a href="#work"><span class="en">Experience</span><span class="zh">经历</span></a>
+            <a href="#recent-news"><span class="en">Recent News</span><span class="zh">近期动态</span></a>
+            <a href="https://jamessand.github.io/blog/" target="_blank" rel="noopener noreferrer"><span class="en">Blog</span><span class="zh">博客</span></a>
+            <a href="data/zhizhousha-ut-austin-cs-phd.pdf" target="_blank" rel="noopener noreferrer"><span class="en">CV</span><span class="zh">简历</span><span class="nav-external" aria-hidden="true"> ↗</span></a>
+          </div>
+        </div>
+      </nav>
+    </header>
 
-                </p>
+    <!-- Page outline -->
+    <nav class="page-toc" aria-label="Page outline" data-heading-selector="main h2">
+      <div class="page-toc-handle" aria-hidden="true">
+        <span class="page-toc-handle-icon">☰</span>
+        <span class="page-toc-handle-label">Outline</span>
+      </div>
+      <div class="page-toc-panel">
+        <p class="page-toc-title"><span class="en">On this page</span><span class="zh">本页目录</span></p>
+        <ul class="page-toc-list"></ul>
+      </div>
+    </nav>
 
-                <p>
-                  My research focuses on LLMs post-training, reinforcement learning, and agentic systems. 
-                </p>
-                
-                <!-- <p>
-
-                Previously, I received my B.S. degree in Computer Science from Tsinghua University.
-
-                </p> -->
-
-                <p>
-
-                <!-- Hi! I am Zhizhou Sha, a final-year undergraduate majoring Computer Science at Tsinghua University.  -->
-
-                  <!-- I'm a final-year undergraduate majoring Computer Science and Technology, at Department of Computer Science and Technonlogy, <a href="https://www.tsinghua.edu.cn/en/">Tsinghua University</a>. -->
-                <!-- Currently, I am a research intern, working remotely with <a href="https://scholar.google.com/citations?user=yDZct7UAAAAJ&hl=en">Zhao Song</a> and <a href="https://yingyuliang.github.io/">Yingyu Liang</a>. -->
-                </p>
-                <!-- <p>
-                Previously, I was fortunate to work with <a href="https://pages.ucsd.edu/~ztu/"> Zhuowen Tu</a> at UCSD, for generative models in computer vision.
-                </p> -->
-
-                <!-- <p>
-                  I really like to discuss anything about research, life, and ourselves. Feel free to drop me an email!
-                </p>
-                <p>
-                  I am actively looking for research opportunities and a Ph.D. position in 2025 Fall! Feel free to drop me an email if you think I will be a good fit.
-                </p> -->
-                <p style="text-align:center">
-                  <a href="mailto:shazhizhou0@gmail.com">Email</a> &nbsp;/&nbsp;
-                  <a href="https://jamessand.github.io/data/wechat.jpg">WeChat</a> &nbsp;/&nbsp;
-                  <!-- <a href="data/CV_en.pdf">CV</a> &nbsp;/&nbsp; -->
-                  <!-- <a href="https://twitter.com/ZhizhouSha">Twitter</a> &nbsp;/&nbsp; -->
-                  <!-- <a href="https://www.linkedin.com/in/zhizhou-sha-017403280/">Linkedin</a> &nbsp;/&nbsp; -->
-                  <a href="https://scholar.google.com/citations?user=eAObdYgAAAAJ">Google Scholar</a> 
-                  /&nbsp;
-                  <a href="https://github.com/JamesSand">Github</a> &nbsp;
-                  <!-- /&nbsp;
-                  <a href="https://jamessand.github.io/blog/">Blog</a> &nbsp; -->
-                </p>
-              </td>
-              <td style="padding:2.5%;width:40%;max-width:40%">
-                <a href="images/IMG_20241121_002542.jpg"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/IMG_20241121_002542.jpg" class="hoverZoomLink"></a>
-              </td>
-            </tr>
-          </tbody></table>
-
-          <!-- Research Interest -->
-          <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:20px;width:100%;vertical-align:middle">
-                <h2>Research</h2>
-                <p>
-                  I am generally interested in enhancing the capabilities of multi-modality models, especially the generative models, and I am dedicated to understanding the theoretical foundations of contemporary Large Language Models.
-                </p>
-              </td>
-            </tr>
-          </tbody></table> -->
-
-          <!-- Publications -->
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:20px;width:100%;vertical-align:middle">
-                <h2>Selected Publications</h2>
-              </td>
-            </tr>            
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-
-            
-
-            <!-- <tr>
-              <td align="center" style="padding:20px;width:25%;vertical-align:middle">
-                <img src="images/omnicontrol_teaser.png" width="160">
-              </td>
-              <td width="75%" valign="middle">
-                <span class="papertitle">OmniControlNet: Dual-stage Integration for Conditional Image Generation</span>
-                <br>
-                Yilin Wang*, Haiyang Xu*, Xiang Zhang, Zeyuan Chen, <strong>Zhizhou Sha</strong>, Zirui Wang, Zhuowen Tu
-                <br>
-                GCV Workshop @ CVPR 2024
-                <br>
-                <a href="https://openaccess.thecvf.com/content/CVPR2024W/GCV/papers/Wang_OmniControlNet_Dual-stage_Integration_for_Conditional_Image_Generation_CVPRW_2024_paper.pdf">paper</a>
-              </td>
-            </tr> -->
-
-            <!-- <tr>
-              <td align="center" style="padding:20px;width:25%;vertical-align:middle">
-                <img src="images/dolfin_figure.png" width="160">
-              </td>
-              <td width="75%" valign="middle">
-                <span class="papertitle">Dolfin: Diffusion Layout Transformers without Autoencoder</span>
-                <br>
-                Yilin Wang, Zeyuan Chen, Liangjun Zhong, Zheng Ding, <strong>Zhizhou Sha</strong>, Zhuowen Tu
-                <br>
-                ECCV 2024
-                <br>
-                <a href="https://arxiv.org/pdf/2310.16305">paper</a>
-              </td>
-            </tr> -->
-
-            <!-- <tr>
-              <td align="center" style="padding:20px;width:25%;vertical-align:middle">
-                <img src="images/MultiLayer.png" width="160">
-              </td>
-              <td width="75%" valign="middle">
-                <span class="papertitle">Multi-Layer Transformers Gradient Can be Approximated in Almost Linear Time</span>
-                <br>
-                (Alphabetical Order)
-                <br>
-                Yingyu Liang, <strong>Zhizhou Sha</strong>, Zhenmei Shi, Zhao Song, Yufa Zhou 
-                <br>
-                OPT Workshop @ NeurIPS 2024
-                <br>
-                <a href="https://arxiv.org/pdf/2408.13233">paper</a> /
-                <a href="data/MultiLayer_Poster_NeurIPS2024.pdf">poster</a>
-              </td>
-            </tr> -->
-
-            <tr>
-              <td align="center" style="padding:20px;width:25%;vertical-align:middle">
-                <img src="images/unfairness_of_desk_rejection.png" width="160">
-              </td>
-              <td width="75%" valign="middle">
-                <span class="papertitle">Dissecting submission limit in desk-rejections: A mathematical analysis of fairness in ai conference policies</span>
-                <br>
-                (Alphabetical Order)
-                <br>
-                Yuefan Cao, Xiaoyu Li, Yingyu Liang, <strong>Zhizhou Sha</strong>, Zhenmei Shi, Zhao Song, Jiahao Zhang
-                <br>
-                ICML 2025
-                <br>
-                <a href="https://arxiv.org/pdf/2502.00690">paper</a>
-              </td>
-            </tr>
-
-            <tr>
-              <td align="center" style="padding:20px;width:25%;vertical-align:middle">
-                <img src="images/looped_relu_as_programmable_computer.png" width="160">
-              </td>
-              <td width="75%" valign="middle">
-                <span class="papertitle">Looped ReLU MLPs May Be All You Need as Programmable Computers</span>
-                <br>
-                (Alphabetical Order)
-                <br>
-                Yingyu Liang, <strong>Zhizhou Sha</strong>, Zhenmei Shi, Zhao Song, Yufa Zhou
-                <br>
-                AISTATS 2025
-                <br>
-                <a href="https://arxiv.org/pdf/2410.09375">paper</a>
-              </td>
-            </tr>
-
-            <tr>
-              <td align="center" style="padding:20px;width:25%;vertical-align:middle">
-                <img src="images/hsr.jpg" width="160">
-              </td>
-              <td width="75%" valign="middle">
-                <span class="papertitle">HSR-Enhanced Sparse Attention Acceleration</span>
-                <br>
-                (Alphabetical Order)
-                <br>
-                Bo Chen, Yingyu Liang, <strong>Zhizhou Sha</strong>, Zhenmei Shi, Zhao Song, Yufa Zhou
-                <br>
-                CPAL 2025
-                <br>
-                <a href="https://arxiv.org/pdf/2410.10165">paper</a>
-                /
-                <a href="data/HSR_Poster.pdf">poster</a>
-              </td>
-            </tr>
-
-            <!-- <tr>
-              <td align="center" style="padding:20px;width:25%;vertical-align:middle">
-                <img src="images/dp_ntk_regression.png" width="160">
-              </td>
-              <td width="75%" valign="middle">
-                <span class="papertitle">Differential Privacy Mechanisms in Neural Tangent Kernel Regression</span>
-                <br>
-                (Alphabetical Order)
-                <br>
-                Yingyu Liang, <strong>Zhizhou Sha</strong>, Zhenmei Shi, Zhao Song 
-                <br>
-                WACV 2025
-                <br>
-                <a href="https://arxiv.org/pdf/2407.13621">paper</a>
-              </td>
-            </tr> -->
-
-            <tr>
-              <td align="center" style="padding:20px;width:25%;vertical-align:middle">
-                <img src="images/tokencompose_teaser.jpg" width="160">
-              </td>
-              <td width="75%" valign="middle">
-                <span class="papertitle">TokenCompose: Text-to-Image Diffusion with Token-level Supervision</span>
-                <br>
-                Zirui Wang, <strong>Zhizhou Sha</strong>, Zheng Ding, Yilin Wang, Zhuowen Tu
-                <br>
-                CVPR 2024
-                <br>
-                <a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Wang_TokenCompose_Text-to-Image_Diffusion_with_Token-level_Supervision_CVPR_2024_paper.pdf">paper</a>
-                /
-                <a href="https://github.com/mlpc-ucsd/TokenCompose">code</a>
-                /
-                <a href="https://mlpc-ucsd.github.io/TokenCompose/">website</a>
-              </td>
-            </tr>
-          </tbody></table>
-
-
-          <!-- Projects -->
-          <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:20px;width:100%;vertical-align:middle">
-                <h2>Projects</h2>
-              </td>
-            </tr>            
-
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-
-            <tr>
-              <td align="center" style="padding:20px;width:25%;vertical-align:middle">
-                <video id="pbrs_h1_video" width="160" autoplay controls loop>
-                  <source src="images/pbrs_h1.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </td>
-              <td width="75%" valign="middle">
-                <span class="papertitle">PBRS algorithm for Unitree H1 Robot</span>
-                <br>
-                <a href="https://jamessand.github.io/PBRS-H1/">website</a>
-                <p>
-                  Implement the <a href="https://github.com/se-hwan/pbrs-humanoid">PBRS algorithm</a> specifically tailored for the Unitree H1 Robot. Enable the H1 Robot to walk following given linear velocity and angular velocity commands without falling.
-                </p>
-              </td>
-            </tr>
-
-          </tbody></table> -->
-
-
-
-
-          <!-- Footnote -->
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:0px">
-                <br>
-                <div style="width: 25%;margin-left: auto;margin-right: auto;">
-                  <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=hzg46Gqr37YDk2f7GAOl0s5KuZfl82QxcxigzUVPyDc&cl=ffffff&w=a"></script>
+    <main>
+      <!-- Identity -->
+      <section class="container identity-section">
+        <div class="identity-top">
+          <div class="identity-top-text">
+            <h1><span class="en">Zhizhou Sha</span><span class="zh">沙之洲</span></h1>
+            <p class="name-alt zh">Zhizhou Sha</p>
+            <ul class="identity-list">
+              <li>
+                <span class="company-logo" style="width:44px;height:44px;" role="img" aria-label="The University of Texas at Austin"><img src="images/logos/ut-austin.png" alt=""></span>
+                <div class="identity-list-text">
+                  <strong><span class="en">Ph.D. Student</span><span class="zh">博士生</span></strong><br>
+                  <span class="en">Department of Computer Science<br>The University of Texas at Austin</span>
+                  <span class="zh">计算机科学系<br>得克萨斯大学奥斯汀分校</span>
                 </div>
+              </li>
+              <li>
+                <span class="company-logo" style="width:44px;height:44px;" role="img" aria-label="Together AI"><img src="images/logos/together.png" alt=""></span>
+                <div class="identity-list-text">
+                  <strong><span class="en">Research Intern, Summer 2026</span><span class="zh">研究实习生（2026 年夏）</span></strong><br>
+                  <span class="en">KV-Cache Quantization<br>Together AI</span>
+                  <span class="zh">KV-Cache 量化<br>Together AI</span>
+                </div>
+              </li>
+              <li>
+                <span class="company-logo" style="width:44px;height:44px;" role="img" aria-label="Tsinghua University"><img src="images/logos/tsinghua.png" alt=""></span>
+                <div class="identity-list-text">
+                  <strong>B.Eng.</strong><br>
+                  <span class="en">Computer Science and Technology<br>Tsinghua University</span>
+                  <span class="zh">计算机科学与技术<br>清华大学</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <aside class="identity-photo">
+            <img src="images/profile.jpg" alt="Zhizhou Sha">
+          </aside>
+        </div>
+        <div class="identity-meta">
+          <p class="contact-line"><span class="contact-icon" aria-hidden="true">🏢</span> <span class="en">Location: Austin, Texas, United States</span><span class="zh">所在地：美国得克萨斯州奥斯汀</span></p>
+          <p class="contact-line"><span class="contact-icon" aria-hidden="true">📮</span> <span class="en">Email:</span><span class="zh">邮箱：</span> <a href="mailto:shazhizhou0@gmail.com">shazhizhou0 [at] gmail.com</a></p>
+          <div class="identity-social" aria-label="Social links">
+            <a class="social-icon-link lg" href="https://github.com/JamesSand" aria-label="GitHub" title="GitHub" target="_blank" rel="noopener noreferrer"><svg width="24" height="24"><use href="#i-github"/></svg></a>
+            <a class="social-icon-link lg" href="https://scholar.google.com/citations?user=eAObdYgAAAAJ" aria-label="Google Scholar" title="Google Scholar" target="_blank" rel="noopener noreferrer"><svg width="24" height="24"><use href="#i-scholar"/></svg></a>
+            <a class="social-icon-link lg" href="https://www.linkedin.com/in/zhizhou-sha-017403280/" aria-label="LinkedIn" title="LinkedIn" target="_blank" rel="noopener noreferrer"><svg width="22" height="22"><use href="#i-linkedin"/></svg></a>
+            <a class="social-icon-link lg" href="data/wechat.jpg" aria-label="WeChat" title="WeChat" target="_blank" rel="noopener noreferrer"><svg width="24" height="24"><use href="#i-wechat"/></svg></a>
+            <a class="social-icon-link lg" href="mailto:shazhizhou0@gmail.com" aria-label="Email" title="Email"><svg width="24" height="24"><use href="#i-mail"/></svg></a>
+          </div>
+        </div>
+      </section>
 
-                <p style="text-align:center;font-size:small;">
-                  This is the source code from <a href="https://jonbarron.info/">Jon Barron</a>. Thanks to him for sharing this beautiful template!
-                </p>
-              </td>
-            </tr>
-          </tbody></table>
+      <!-- Who am I -->
+      <section class="container content-section">
+        <h2 id="who-am-i"><span class="en">Who am I?</span><span class="zh">关于我</span></h2>
+        <div class="en">
+          <p>
+            I am a <strong>Ph.D. student</strong> in Computer Science at <a href="https://www.cs.utexas.edu/">The University of Texas at Austin</a>, advised by <a href="https://www.cs.utexas.edu/~lqiang/">Qiang Liu</a> and <a href="https://www.vita-group.space/pi">Zhangyang (Atlas) Wang</a>.
+          </p>
+          <p>
+            I received my <strong>B.Eng.</strong> in Computer Science and Technology from <a href="https://www.tsinghua.edu.cn/en/">Tsinghua University</a> in 2025. I have been fortunate to intern at <a href="https://www.together.ai/">Together AI</a> and <a href="https://www.bytedance.com/">ByteDance</a>, to work with Prof. <a href="https://pages.ucsd.edu/~ztu/">Zhuowen Tu</a> on generative models at UC San Diego, and to work with <a href="https://yingyuliang.github.io/">Yingyu Liang</a>, <a href="https://pages.cs.wisc.edu/~zhmeishi/">Zhenmei Shi</a>, and <a href="https://scholar.google.com/citations?user=yDZct7UAAAAJ&amp;hl=en">Zhao Song</a> on the theory of efficient deep learning.
+          </p>
+        </div>
+        <div class="zh">
+          <p>
+            我是沙之洲，<a href="https://www.cs.utexas.edu/">得克萨斯大学奥斯汀分校</a>计算机科学专业的<strong>博士生</strong>，导师是 <a href="https://www.cs.utexas.edu/~lqiang/">Qiang Liu</a> 和 <a href="https://www.vita-group.space/pi">Zhangyang (Atlas) Wang</a>。
+          </p>
+          <p>
+            我 2025 年本科毕业于<a href="https://www.tsinghua.edu.cn/en/">清华大学</a>计算机科学与技术专业。我曾在 <a href="https://www.together.ai/">Together AI</a> 和<a href="https://www.bytedance.com/">字节跳动</a>实习，也有幸在 UC San Diego 跟随 <a href="https://pages.ucsd.edu/~ztu/">Zhuowen Tu</a> 教授研究生成模型，并与 <a href="https://yingyuliang.github.io/">Yingyu Liang</a>、<a href="https://pages.cs.wisc.edu/~zhmeishi/">Zhenmei Shi</a>、<a href="https://scholar.google.com/citations?user=yDZct7UAAAAJ&amp;hl=en">Zhao Song</a> 合作研究高效深度学习理论。
+          </p>
+        </div>
+      </section>
 
-        </td>
-      </tr>
-    </table>
+      <!-- Research Highlights -->
+      <section class="container content-section">
+        <h2 id="research-highlights"><span class="en">Research Highlights</span><span class="zh">研究亮点</span></h2>
+        <p class="research-focus-intro">
+          <span class="en">I focus on LLM post-training, reinforcement learning, quantization, and agentic systems. <span class="research-contact-cta">For aligned collaborations, feel free to <a href="mailto:shazhizhou0@gmail.com">get in touch</a>.</span></span>
+          <span class="zh">我的研究方向是大模型后训练、强化学习、量化和智能体系统。如果方向契合，欢迎<a href="mailto:shazhizhou0@gmail.com">联系我</a>合作。</span>
+        </p>
+
+        <div class="focus-grid">
+          <article class="focus-card">
+            <h3><span class="en">Post-Training &amp; Agents</span><span class="zh">后训练与智能体</span></h3>
+            <div class="focus-track">
+              <h4><span class="en">RLVR Geometry and Optimization</span><span class="zh">RLVR 几何与优化</span></h4>
+              <div class="focus-projects">
+                <a class="focus-project" href="https://arxiv.org/abs/2511.08567" target="_blank" rel="noopener noreferrer">The Path Not Taken</a>
+                <a class="focus-project" href="https://arxiv.org/abs/2607.19331" target="_blank" rel="noopener noreferrer">ISO</a>
+              </div>
+            </div>
+            <div class="focus-track">
+              <h4><span class="en">Agentic Systems</span><span class="zh">智能体系统</span></h4>
+              <div class="focus-projects">
+                <a class="focus-project" href="https://github.com/JamesSand/daily-arxiv-agent" target="_blank" rel="noopener noreferrer">daily-arxiv-agent</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="focus-card">
+            <h3><span class="en">Quantization</span><span class="zh">量化</span></h3>
+            <div class="focus-track">
+              <h4><span class="en">Quantization-Aware Training</span><span class="zh">量化感知训练</span></h4>
+              <div class="focus-projects">
+                <a class="focus-project" href="https://arxiv.org/abs/2609.39223" target="_blank" rel="noopener noreferrer">QATFactory</a>
+              </div>
+            </div>
+            <div class="focus-track">
+              <h4><span class="en">KV-Cache Quantization</span><span class="zh">KV-Cache 量化</span></h4>
+              <div class="focus-projects">
+                <a class="focus-project is-internal" href="#budget-pca">Budget-PCA</a>
+                <a class="focus-project is-internal" href="#glm-kv-cache">GLM-5.2 KV Cache</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="focus-card">
+            <h3><span class="en">Efficient Deep Learning Theory</span><span class="zh">高效深度学习理论</span></h3>
+            <div class="focus-track">
+              <h4><span class="en">Attention and Transformers</span><span class="zh">注意力与 Transformer</span></h4>
+              <div class="focus-projects">
+                <a class="focus-project" href="https://arxiv.org/abs/2408.13233" target="_blank" rel="noopener noreferrer">Multi-Layer Gradient</a>
+                <a class="focus-project" href="https://arxiv.org/abs/2410.10165" target="_blank" rel="noopener noreferrer">HSR Sparse Attention</a>
+              </div>
+            </div>
+            <div class="focus-track">
+              <h4><span class="en">Expressivity and Privacy</span><span class="zh">表达能力与隐私</span></h4>
+              <div class="focus-projects">
+                <a class="focus-project" href="https://arxiv.org/abs/2410.09375" target="_blank" rel="noopener noreferrer">Looped ReLU MLPs</a>
+                <a class="focus-project" href="https://arxiv.org/abs/2407.13621" target="_blank" rel="noopener noreferrer">DP-NTK</a>
+                <a class="focus-project" href="https://arxiv.org/abs/2502.00693" target="_blank" rel="noopener noreferrer">DPBloomfilter</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="focus-card">
+            <h3><span class="en">Generative Models</span><span class="zh">生成模型</span></h3>
+            <div class="focus-track">
+              <h4><span class="en">Image and Layout Generation</span><span class="zh">图像与版面生成</span></h4>
+              <div class="focus-projects">
+                <a class="focus-project" href="https://mlpc-ucsd.github.io/TokenCompose/" target="_blank" rel="noopener noreferrer">TokenCompose</a>
+                <a class="focus-project" href="https://arxiv.org/abs/2406.05871" target="_blank" rel="noopener noreferrer">OmniControlNet</a>
+                <a class="focus-project" href="https://arxiv.org/abs/2310.16305" target="_blank" rel="noopener noreferrer">Dolfin</a>
+              </div>
+            </div>
+            <div class="focus-track">
+              <h4><span class="en">Flow Models</span><span class="zh">流模型</span></h4>
+              <div class="focus-projects">
+                <a class="focus-project" href="https://github.com/JamesSand/SecondOrderRectifiedFlow" target="_blank" rel="noopener noreferrer">Second-Order Rectified Flow</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <p class="section-note"><span class="en">For code and smaller projects, see my <a href="https://github.com/JamesSand">GitHub</a>.</span><span class="zh">更多代码和小项目见我的 <a href="https://github.com/JamesSand">GitHub</a>。</span></p>
+
+        <p class="featured-label"><span class="en">Featured Projects</span><span class="zh">代表项目</span></p>
+
+        <!-- 2026 -->
+        <h3 class="year-heading">2026</h3>
+        <article class="project-card">
+          <div class="project-media"><img src="images/projects/iso.png" alt="Accuracy curves of ISO-AdamW, Sigma-only, and AdamW" loading="lazy"></div>
+          <div class="project-body">
+            <h3>ISO: An RLVR-Native Optimization Stack</h3>
+            <p class="project-meta"><span class="en">RLVR optimization</span><span class="zh">RLVR 优化</span> · arXiv 2026</p>
+            <p class="project-summary">
+              <span class="en">Inherit the spectrum, optimize the frames: ISO keeps each weight matrix's singular spectrum fixed and updates only its input and output singular frames. On Qwen3-4B-Base, ISO-AdamW reaches AdamW's 400-update accuracy in 280 updates with 27% less wall-clock time.</span>
+              <span class="zh">继承谱，优化框架：ISO 固定每个权重矩阵的奇异值谱，只更新输入和输出奇异框架。在 Qwen3-4B-Base 上，ISO-AdamW 用 280 次更新达到 AdamW 400 次更新的准确率，墙钟时间减少 27%。</span>
+            </p>
+            <p class="project-authors">Hanqing Zhu, Wenyan Cong, <strong>Zhizhou Sha</strong>, Sagnik Mukherjee, Xinyuan Song, David González-Martínez, Xiaoxia Wu, Yuandong Tian, Shiwei Liu, David Z. Pan, Zhangyang "Atlas" Wang</p>
+            <div class="project-links"><a href="https://arxiv.org/abs/2607.19331" target="_blank" rel="noopener noreferrer">Paper</a></div>
+          </div>
+        </article>
+
+        <article class="project-card" id="budget-pca">
+          <div class="project-media"><img src="images/projects/budget-pca.png" alt="LongCat frame and residual comparison across cache formats" loading="lazy"></div>
+          <div class="project-body">
+            <h3>Budget-PCA: Low-Rank Compression of Video-Generation KV Caches</h3>
+            <p class="project-meta"><span class="en">KV-cache quantization · Research internship at Together AI, 2026</span><span class="zh">KV-Cache 量化 · Together AI 研究实习，2026</span></p>
+            <p class="project-summary">
+              <span class="en">A calibration-free, fixed-cost method combining chunk-wise low-rank PCA with channel-wise asymmetric 2-bit residual quantization. Across three video-generation systems, it reduces storage from 16 to at most 2.326 bits per element, saving about 85%, and outperforms QVG, the state-of-the-art 2-bit video quantization method, on 11 of 18 metrics, including a 3.48 dB PSNR gain on LongCat-Video.</span>
+              <span class="zh">一种免校准、固定成本的方法，把分块低秩 PCA 和逐通道非对称 2-bit 残差量化结合起来。在三个视频生成系统上，它把存储从 16 bit 降到每元素最多 2.326 bit，节省约 85%，并在 18 项指标中的 11 项上优于目前最好的 2-bit 视频量化方法 QVG，其中 LongCat-Video 的 PSNR 提升 3.48 dB。</span>
+            </p>
+          </div>
+        </article>
+
+        <article class="project-card" id="glm-kv-cache">
+          <div class="project-media project-chart" role="img" aria-label="128K cache memory: BF16 10.97 GiB, NVFP4 3.08 GiB, MXFP4 2.91 GiB">
+            <div class="chart-title"><span class="en">128K cache memory</span><span class="zh">128K Cache 内存</span></div>
+            <div class="chart-row is-base"><span>BF16</span><span class="chart-track"><span class="chart-bar" style="width:100%"></span></span><span>10.97 GiB</span></div>
+            <div class="chart-row"><span>NVFP4</span><span class="chart-track"><span class="chart-bar" style="width:28.1%"></span></span><span>3.08 GiB</span></div>
+            <div class="chart-row"><span>MXFP4</span><span class="chart-track"><span class="chart-bar" style="width:26.5%"></span></span><span>2.91 GiB</span></div>
+          </div>
+          <div class="project-body">
+            <h3>GLM-5.2 KV-Cache Quantization</h3>
+            <p class="project-meta"><span class="en">Long-context inference · Research internship at Together AI, 2026</span><span class="zh">长上下文推理 · Together AI 研究实习，2026</span></p>
+            <p class="project-summary">
+              <span class="en">Built an end-to-end cache-quantization evaluation pipeline for GLM-5.2 on reasoning and long-context benchmarks, including GPQA and RULER, reducing 128K cache memory from 10.97 GiB to 2.91–3.08 GiB. Analyzed numerical errors across cache components and proposed a hybrid-precision design balancing phase fidelity, tail behavior, and memory usage.</span>
+              <span class="zh">搭建 GLM-5.2 Cache 量化的端到端评测流程，覆盖 GPQA、RULER 等推理和长上下文基准，把 128K Cache 内存从 10.97 GiB 降到 2.91–3.08 GiB。分析各 Cache 分量的数值误差，并提出兼顾相位保真、尾部行为和内存占用的混合精度设计。</span>
+            </p>
+            <p class="project-authors">Zhongzhu Zhou, <strong>Zhizhou Sha</strong></p>
+          </div>
+        </article>
+
+        <!-- 2025 -->
+        <h3 class="year-heading">2025</h3>
+        <article class="project-card">
+          <div class="project-media"><img src="images/projects/path-not-taken.png" alt="Singular-value and principal-angle comparison of RL and SFT" loading="lazy"></div>
+          <div class="project-body">
+            <h3>The Path Not Taken: RLVR Provably Learns Off the Principals</h3>
+            <p class="project-meta"><span class="en">RLVR geometry · arXiv 2025 · Preliminary version: Spotlight, NeurIPS 2025 Workshop on Efficient Reasoning</span><span class="zh">RLVR 几何 · arXiv 2025 · 早期版本：NeurIPS 2025 Efficient Reasoning Workshop Spotlight</span></p>
+            <p class="project-summary">
+              <span class="en">Identifies an isospectral pattern in RL post-training: RLVR preserves the singular spectrum, so weight updates are dominated by rotations in the U and V factors rather than changes in singular values, unlike the ~1.12× shrinkage seen with SFT.</span>
+              <span class="zh">发现 RL 后训练中的等谱现象：RLVR 保持奇异值谱不变，权重更新主要是 U、V 因子的旋转，而不是奇异值大小的变化；SFT 后奇异值则有约 1.12 倍的收缩。</span>
+            </p>
+            <p class="project-authors">Hanqing Zhu, Zhenyu Zhang, Hanxian Huang, DiJia Su, Zechun Liu, Jiawei Zhao, Igor Fedorov, Hamed Pirsiavash, <strong>Zhizhou Sha</strong>, Jinwon Lee, David Z. Pan, Zhangyang Wang, Yuandong Tian, Kai Sheng Tai</p>
+            <div class="project-links"><a href="https://arxiv.org/abs/2511.08567" target="_blank" rel="noopener noreferrer">Paper</a></div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-media"><img src="images/unfairness_of_desk_rejection.png" alt="Fairness analysis of desk-rejection policies" loading="lazy"></div>
+          <div class="project-body">
+            <h3>Dissecting Submission Limit in Desk-Rejections: A Mathematical Analysis of Fairness in AI Conference Policies</h3>
+            <p class="project-meta"><span class="en">Fairness in peer review</span><span class="zh">同行评审公平性</span> · ICML 2025</p>
+            <p class="project-summary">
+              <span class="en">Shows that once a paper has more than three authors, desk-rejection under submission limits can no longer avoid penalizing innocent authors, then proposes a fairness-aware mechanism. Individual fairness is NP-hard to optimize, while group fairness is solved efficiently by linear programming.</span>
+              <span class="zh">证明当作者数超过三人时，按投稿上限拒稿无法避免波及无辜作者，并提出兼顾公平的拒稿机制。其中个体公平的优化是 NP-hard，群体公平可以用线性规划高效求解。</span>
+            </p>
+            <p class="project-authors"><span class="en">(Alphabetical Order)</span><span class="zh">（按字母序）</span> Yuefan Cao, Xiaoyu Li, Yingyu Liang, <strong>Zhizhou Sha</strong>, Zhenmei Shi, Zhao Song, Jiahao Zhang</p>
+            <div class="project-links"><a href="https://arxiv.org/abs/2502.00690" target="_blank" rel="noopener noreferrer">Paper</a></div>
+          </div>
+        </article>
+
+        <details class="year-more">
+          <summary><span class="en">Show 3 more from 2025</span><span class="zh">展开 2025 年另外 3 项</span></summary>
+
+          <article class="project-card">
+            <div class="project-media"><img src="images/looped_relu_as_programmable_computer.png" alt="Looped ReLU MLP as a programmable computer" loading="lazy"></div>
+            <div class="project-body">
+              <h3>Looped ReLU MLPs May Be All You Need as Practical Programmable Computers</h3>
+              <p class="project-meta"><span class="en">Learning theory</span><span class="zh">学习理论</span> · AISTATS 2025</p>
+              <p class="project-summary">
+                <span class="en">Proves that Looped ReLU MLPs are computationally complete by emulating a One-Instruction-Set Computer, so simple feed-forward layers with recurrent ReLU connections can act as general-purpose programmable systems.</span>
+                <span class="zh">通过模拟单指令集计算机，证明 Looped ReLU MLP 具有计算完备性：带循环连接的简单前馈 ReLU 网络就可以作为通用可编程系统。</span>
+              </p>
+              <p class="project-authors"><span class="en">(Alphabetical Order)</span><span class="zh">（按字母序）</span> Yingyu Liang, <strong>Zhizhou Sha</strong>, Zhenmei Shi, Zhao Song, Yufa Zhou</p>
+              <div class="project-links"><a href="https://arxiv.org/abs/2410.09375" target="_blank" rel="noopener noreferrer">Paper</a></div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-media"><img src="images/hsr.jpg" alt="Half-Space Reporting for sparse attention" loading="lazy"></div>
+            <div class="project-body">
+              <h3>HSR-Enhanced Sparse Attention Acceleration</h3>
+              <p class="project-meta"><span class="en">Efficient attention</span><span class="zh">高效注意力</span> · CPAL 2025</p>
+              <p class="project-summary">
+                <span class="en">Leverages the sparsity of ReLU attention with a Half-Space Reporting data structure that locates active key-value pairs, reducing cross-attention complexity from O(mnd) to O(mn<sup>4/5</sup>d).</span>
+                <span class="zh">利用 ReLU 注意力的稀疏性，用半空间报告（HSR）数据结构定位活跃的键值对，把交叉注意力的复杂度从 O(mnd) 降到 O(mn<sup>4/5</sup>d)。</span>
+              </p>
+              <p class="project-authors"><span class="en">(Alphabetical Order)</span><span class="zh">（按字母序）</span> Bo Chen, Yingyu Liang, <strong>Zhizhou Sha</strong>, Zhenmei Shi, Zhao Song</p>
+              <div class="project-links">
+                <a href="https://arxiv.org/abs/2410.10165" target="_blank" rel="noopener noreferrer">Paper</a>
+                <a href="data/HSR_Poster.pdf" target="_blank" rel="noopener noreferrer">Poster</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-media"><img src="images/dp_ntk_regression.png" alt="Differentially private NTK regression" loading="lazy"></div>
+            <div class="project-body">
+              <h3>Differential Privacy Mechanisms in Neural Tangent Kernel Regression</h3>
+              <p class="project-meta"><span class="en">Private learning</span><span class="zh">隐私学习</span> · WACV 2025</p>
+              <p class="project-summary">
+                <span class="en">Builds a differentially private NTK regression framework with the Gaussian Sampling Mechanism, adding formal privacy guarantees while preserving the positive semi-definiteness of the kernel matrix.</span>
+                <span class="zh">用高斯采样机制构建差分隐私 NTK 回归框架，在提供形式化隐私保证的同时保持核矩阵的半正定性。</span>
+              </p>
+              <p class="project-authors"><span class="en">(Alphabetical Order)</span><span class="zh">（按字母序）</span> Jiuxiang Gu, Yingyu Liang, <strong>Zhizhou Sha</strong>, Zhenmei Shi, Zhao Song</p>
+              <div class="project-links">
+                <a href="https://arxiv.org/abs/2407.13621" target="_blank" rel="noopener noreferrer">Paper</a>
+                <a href="https://github.com/JamesSand/DP-NTK-Regression" target="_blank" rel="noopener noreferrer">Code</a>
+              </div>
+            </div>
+          </article>
+        </details>
+
+        <!-- 2024 -->
+        <h3 class="year-heading">2024</h3>
+        <article class="project-card">
+          <div class="project-media"><img src="images/projects/tokencompose.jpg" alt="TokenCompose overview" loading="lazy"></div>
+          <div class="project-body">
+            <h3>TokenCompose: Text-to-Image Diffusion with Token-level Supervision</h3>
+            <p class="project-meta"><span class="en">Generative models</span><span class="zh">生成模型</span> · CVPR 2024</p>
+            <p class="project-summary">
+              <span class="en">Adds a token-level loss to Stable Diffusion fine-tuning, using POS tagging and DINOv2 segmentations as localized supervision. Raises the multi-object generation success rate from 28% to 52% with an FID of 20.19.</span>
+              <span class="zh">在 Stable Diffusion 微调中加入 token 级损失，用词性标注和 DINOv2 分割提供局部监督，把多物体生成成功率从 28% 提升到 52%，FID 为 20.19。</span>
+            </p>
+            <p class="project-authors">Zirui Wang, <strong>Zhizhou Sha</strong>, Zheng Ding, Yilin Wang, Zhuowen Tu</p>
+            <div class="project-links">
+              <a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Wang_TokenCompose_Text-to-Image_Diffusion_with_Token-level_Supervision_CVPR_2024_paper.pdf" target="_blank" rel="noopener noreferrer">Paper</a>
+              <a href="https://mlpc-ucsd.github.io/TokenCompose/" target="_blank" rel="noopener noreferrer">Project</a>
+              <a href="https://github.com/mlpc-ucsd/TokenCompose" target="_blank" rel="noopener noreferrer">Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-media"><img src="images/MultiLayer.png" alt="Multi-layer Transformer gradient approximation" loading="lazy"></div>
+          <div class="project-body">
+            <h3>Multi-Layer Transformers Gradient Can be Approximated in Almost Linear Time</h3>
+            <p class="project-meta"><span class="en">Efficient training</span><span class="zh">高效训练</span> · OPT Workshop @ NeurIPS 2024</p>
+            <p class="project-summary">
+              <span class="en">Approximates Transformer gradients with a low-rank Taylor expansion of attention's exponential operations, reducing gradient computation from O(n<sup>2</sup>) to almost-linear O(n<sup>1+o(1)</sup>) with provably bounded error.</span>
+              <span class="zh">对注意力中的指数运算做 Taylor 展开并低秩近似，把 Transformer 梯度计算从 O(n<sup>2</sup>) 降到近线性的 O(n<sup>1+o(1)</sup>)，误差有理论界。</span>
+            </p>
+            <p class="project-authors"><span class="en">(Alphabetical Order)</span><span class="zh">（按字母序）</span> Yingyu Liang, <strong>Zhizhou Sha</strong>, Zhenmei Shi, Zhao Song, Yufa Zhou</p>
+            <div class="project-links">
+              <a href="https://arxiv.org/abs/2408.13233" target="_blank" rel="noopener noreferrer">Paper</a>
+              <a href="data/MultiLayer_Poster_NeurIPS2024.pdf" target="_blank" rel="noopener noreferrer">Poster</a>
+              <a href="https://github.com/JamesSand/MultiLayer" target="_blank" rel="noopener noreferrer">Code</a>
+            </div>
+          </div>
+        </article>
+
+        <details class="year-more">
+          <summary><span class="en">Show 2 more from 2024</span><span class="zh">展开 2024 年另外 2 项</span></summary>
+
+          <article class="project-card">
+            <div class="project-media"><img src="images/dolfin_figure.png" alt="Dolfin architecture" loading="lazy"></div>
+            <div class="project-body">
+              <h3>Dolfin: Diffusion Layout Transformers without Autoencoder</h3>
+              <p class="project-meta"><span class="en">Layout generation</span><span class="zh">版面生成</span> · ECCV 2024</p>
+              <p class="project-summary">
+                <span class="en">Enhances the layout generation capability of diffusion models by removing the autoencoder.</span>
+                <span class="zh">去掉自编码器，增强扩散模型的版面生成能力。</span>
+              </p>
+              <p class="project-authors">Yilin Wang, Zeyuan Chen, Liangjun Zhong, Zheng Ding, <strong>Zhizhou Sha</strong>, Zhuowen Tu</p>
+              <div class="project-links"><a href="https://arxiv.org/abs/2310.16305" target="_blank" rel="noopener noreferrer">Paper</a></div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-media"><img src="images/omnicontrolnet.png" alt="OmniControlNet overview" loading="lazy"></div>
+            <div class="project-body">
+              <h3>OmniControlNet: Dual-stage Integration for Conditional Image Generation</h3>
+              <p class="project-meta"><span class="en">Generative models</span><span class="zh">生成模型</span> · GCV Workshop @ CVPR 2024</p>
+              <p class="project-summary">
+                <span class="en">Unifies external condition control for image generation in a single dense model.</span>
+                <span class="zh">把图像生成的外部条件控制统一到一个稠密模型中。</span>
+              </p>
+              <p class="project-authors">Yilin Wang, Haiyang Xu, Xiang Zhang, Zeyuan Chen, <strong>Zhizhou Sha</strong>, Zirui Wang, Zhuowen Tu</p>
+              <div class="project-links"><a href="https://openaccess.thecvf.com/content/CVPR2024W/GCV/papers/Wang_OmniControlNet_Dual-stage_Integration_for_Conditional_Image_Generation_CVPRW_2024_paper.pdf" target="_blank" rel="noopener noreferrer">Paper</a></div>
+            </div>
+          </article>
+        </details>
+      </section>
+
+      <!-- Recent News -->
+      <section class="container content-section">
+        <h2 id="recent-news"><span class="en">Recent News</span><span class="zh">近期动态</span></h2>
+        <ul class="news-list">
+          <li class="news-item">
+            <span class="news-date">2026/10</span>
+            <div>
+              <span class="news-badge news-badge-talk">Poster</span>
+              <span class="news-body"><span class="en">Poster on understanding and optimizing RLVR through model geometry at the IFML Fall Symposium 2026 in Austin.</span><span class="zh">在奥斯汀 IFML Fall Symposium 2026 展示海报，主题是从模型几何理解和优化 RLVR。</span></span>
+            </div>
+          </li>
+          <li class="news-item">
+            <span class="news-date">2026/09</span>
+            <div>
+              <span class="news-badge news-badge-paper">Paper</span>
+              <span class="news-body"><span class="en">QATFactory, a deployment-aligned framework for quantization-aware training, is on arXiv.</span><span class="zh">面向部署的量化感知训练框架 QATFactory 已发布在 arXiv。</span></span>
+              <span class="news-links">
+                <a href="https://arxiv.org/abs/2609.39223" target="_blank" rel="noopener noreferrer">Paper</a>
+              </span>
+            </div>
+          </li>
+          <li class="news-item">
+            <span class="news-date">2026/07</span>
+            <div>
+              <span class="news-badge news-badge-paper">Paper</span>
+              <span class="news-body"><span class="en">ISO: An RLVR-Native Optimization Stack is on arXiv.</span><span class="zh">论文 ISO: An RLVR-Native Optimization Stack 已发布在 arXiv。</span></span>
+              <span class="news-links"><a href="https://arxiv.org/abs/2607.19331" target="_blank" rel="noopener noreferrer">Paper</a></span>
+            </div>
+          </li>
+          <li class="news-item">
+            <span class="news-date">2026/05</span>
+            <div>
+              <span class="news-badge news-badge-project">Internship</span>
+              <span class="news-body"><span class="en">Started a summer research internship at Together AI, working on KV-cache quantization.</span><span class="zh">开始在 Together AI 暑期研究实习，方向是 KV-Cache 量化。</span></span>
+            </div>
+          </li>
+          <li class="news-item">
+            <span class="news-date">2025/11</span>
+            <div>
+              <span class="news-badge news-badge-honor">Spotlight</span>
+              <span class="news-body"><span class="en">The Path Not Taken is on arXiv. A preliminary version was accepted as a spotlight at the NeurIPS 2025 Workshop on Efficient Reasoning.</span><span class="zh">The Path Not Taken 已发布在 arXiv，早期版本被 NeurIPS 2025 Efficient Reasoning Workshop 接收为 Spotlight。</span></span>
+              <span class="news-links"><a href="https://arxiv.org/abs/2511.08567" target="_blank" rel="noopener noreferrer">Paper</a></span>
+            </div>
+          </li>
+          <li class="news-item">
+            <span class="news-date">2025/08</span>
+            <div>
+              <span class="news-badge news-badge-event">Milestone</span>
+              <span class="news-body"><span class="en">Started my Ph.D. in Computer Science at UT Austin.</span><span class="zh">开始在 UT Austin 攻读计算机科学博士。</span></span>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Work -->
+      <section class="container content-section">
+        <h2 id="work"><span class="en">Work</span><span class="zh">工作与科研经历</span></h2>
+        <div class="cv-list">
+          <article class="cv-item">
+            <span class="company-logo" style="width:48px;height:48px;" role="img" aria-label="Together AI"><img src="images/logos/together.png" alt="" loading="lazy"></span>
+            <div class="cv-item-body">
+              <h3>Together AI</h3>
+              <p class="muted small"><span class="en">Budget-PCA for video-generation KV caches; GLM-5.2 cache-quantization evaluation</span><span class="zh">视频生成 KV Cache 压缩 Budget-PCA；GLM-5.2 Cache 量化评测</span></p>
+              <p><strong><span class="en">Research Intern</span><span class="zh">研究实习生</span></strong> <span class="period-pill">May 2026 - Aug 2026</span></p>
+            </div>
+          </article>
+          <article class="cv-item">
+            <span class="company-logo logo-mono" style="width:48px;height:48px;--mono:#1f5f8b;" role="img" aria-label="Efficient deep learning theory">ML</span>
+            <div class="cv-item-body">
+              <h3><span class="en">Efficient Deep Learning Theory</span><span class="zh">高效深度学习理论</span></h3>
+              <p class="muted small"><span class="en">Research collaboration, advised by Yingyu Liang and Zhenmei Shi</span><span class="zh">科研合作，导师 Yingyu Liang 和 Zhenmei Shi</span></p>
+              <p><strong><span class="en">Undergraduate Researcher</span><span class="zh">本科生研究员</span></strong> <span class="period-pill">Mar 2024 - Apr 2025</span></p>
+            </div>
+          </article>
+          <article class="cv-item">
+            <span class="company-logo" style="width:48px;height:48px;" role="img" aria-label="ByteDance"><img src="images/logos/bytedance.png" alt="" loading="lazy"></span>
+            <div class="cv-item-body">
+              <h3>ByteDance</h3>
+              <p class="muted small"><span class="en">Automated content moderation with BERT-based models and daily incremental learning</span><span class="zh">基于 BERT 模型和每日增量学习的自动内容审核</span></p>
+              <p><strong><span class="en">Research Intern</span><span class="zh">研究实习生</span></strong> <span class="period-pill">Dec 2023 - Jan 2024</span></p>
+            </div>
+          </article>
+          <article class="cv-item">
+            <span class="company-logo" style="width:48px;height:48px;" role="img" aria-label="UC San Diego"><img src="images/logos/ucsd.png" alt="" loading="lazy"></span>
+            <div class="cv-item-body">
+              <h3>mlPC Lab, UC San Diego</h3>
+              <p class="muted small"><span class="en">Compositional generation in text-to-image diffusion, advised by Zhuowen Tu</span><span class="zh">文生图扩散模型的组合生成，导师 Zhuowen Tu</span></p>
+              <p><strong><span class="en">Undergraduate Researcher</span><span class="zh">本科生研究员</span></strong> <span class="period-pill">Jun 2023 - Dec 2023</span></p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Education -->
+      <section class="container content-section">
+        <h2 id="education"><span class="en">Education</span><span class="zh">教育背景</span></h2>
+        <div class="cv-list">
+          <article class="edu-item">
+            <div class="edu-item-body">
+              <h3><span class="en">The University of Texas at Austin (UT Austin)</span><span class="zh">得克萨斯大学奥斯汀分校（UT Austin）</span></h3>
+              <p class="muted small"><span class="en">Austin, Texas, United States</span><span class="zh">美国得克萨斯州奥斯汀</span></p>
+              <p><strong><span class="en">Doctor of Philosophy (Ph.D.) in Computer Science</span><span class="zh">计算机科学博士</span></strong> <span class="period-pill">Aug 2025 - Present</span></p>
+              <div class="education-summary">
+                <p><strong><span class="en">Research Focus:</span><span class="zh">研究方向：</span></strong> <span class="en">LLM post-training, reinforcement learning, quantization.</span><span class="zh">大模型后训练、强化学习、量化。</span></p>
+              </div>
+            </div>
+            <span class="company-logo" style="width:56px;height:56px;" role="img" aria-label="The University of Texas at Austin"><img src="images/logos/ut-austin.png" alt="" loading="lazy"></span>
+          </article>
+          <article class="edu-item">
+            <div class="edu-item-body">
+              <h3><span class="en">Tsinghua University (THU)</span><span class="zh">清华大学</span></h3>
+              <p class="muted small"><span class="en">Beijing, China</span><span class="zh">中国北京</span></p>
+              <p><strong><span class="en">Bachelor of Engineering in Computer Science and Technology</span><span class="zh">计算机科学与技术工学学士</span></strong> <span class="period-pill">Sep 2020 - Jun 2025</span></p>
+              <div class="education-summary">
+                <p><strong><span class="en">Awards:</span><span class="zh">奖项：</span></strong> <span class="en">Comprehensive Scholarship (Top 20%), 2023 and 2024.</span><span class="zh">综合奖学金（前 20%），2023 年、2024 年。</span></p>
+              </div>
+            </div>
+            <span class="company-logo" style="width:56px;height:56px;" role="img" aria-label="Tsinghua University"><img src="images/logos/tsinghua.png" alt="" loading="lazy"></span>
+          </article>
+        </div>
+      </section>
+
+      <!-- Professional Service -->
+      <section class="container content-section">
+        <h2 id="professional-service"><span class="en">Professional Service</span><span class="zh">学术服务</span></h2>
+        <ul class="service-list">
+          <li>
+            <strong><span class="en">Conference Reviewer:</span><span class="zh">会议审稿人：</span></strong>
+            International Conference on Learning Representations (ICLR 2025, 2026); International Conference on Machine Learning (ICML 2025, 2026); IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR 2026); AAAI Conference on Artificial Intelligence (AAAI 2025); IEEE/CVF Winter Conference on Applications of Computer Vision (WACV 2025)
+          </li>
+        </ul>
+      </section>
+
+      <!-- Selected Publications -->
+      <section class="container content-section" id="selected-publications">
+        <h2 id="selected-publications-heading"><span class="en">Selected Publications</span><span class="zh">代表论文</span></h2>
+        <p><span class="en">Selected recent and representative work across LLM post-training, efficient deep learning, and generative models.</span><span class="zh">大模型后训练、高效深度学习和生成模型方向的近期代表工作。</span></p>
+        <ul class="publication-list">
+          <li class="publication-item">
+            <span class="publication-year">2026</span>
+            <div class="publication-main">
+              <strong>ISO: An RLVR-Native Optimization Stack</strong>
+              <div class="publication-meta">
+                <span class="publication-venue">arXiv</span>
+                <a class="tag" href="https://arxiv.org/abs/2607.19331" target="_blank" rel="noopener noreferrer">Paper</a>
+              </div>
+            </div>
+          </li>
+          <li class="publication-item">
+            <span class="publication-year">2026</span>
+            <div class="publication-main">
+              <strong>QATFactory: A Versatile, Deployment-Aligned Framework for Quantization-aware Training</strong>
+              <div class="publication-meta">
+                <span class="publication-venue">arXiv</span>
+                <a class="tag" href="https://arxiv.org/abs/2609.39223" target="_blank" rel="noopener noreferrer">Paper</a>
+              </div>
+            </div>
+          </li>
+          <li class="publication-item">
+            <span class="publication-year">2025</span>
+            <div class="publication-main">
+              <strong>The Path Not Taken: RLVR Provably Learns Off the Principals</strong>
+              <div class="publication-meta">
+                <span class="publication-venue">arXiv · NeurIPS Workshop Spotlight</span>
+                <a class="tag" href="https://arxiv.org/abs/2511.08567" target="_blank" rel="noopener noreferrer">Paper</a>
+              </div>
+            </div>
+          </li>
+          <li class="publication-item">
+            <span class="publication-year">2025</span>
+            <div class="publication-main">
+              <strong>Dissecting Submission Limit in Desk-Rejections: A Mathematical Analysis of Fairness in AI Conference Policies</strong>
+              <div class="publication-meta">
+                <span class="publication-venue">ICML</span>
+                <span class="publication-rating">CORE A*</span><span class="publication-rating">CCF A</span>
+                <a class="tag" href="https://arxiv.org/abs/2502.00690" target="_blank" rel="noopener noreferrer">Paper</a>
+              </div>
+            </div>
+          </li>
+          <li class="publication-item">
+            <span class="publication-year">2025</span>
+            <div class="publication-main">
+              <strong>Looped ReLU MLPs May Be All You Need as Practical Programmable Computers</strong>
+              <div class="publication-meta">
+                <span class="publication-venue">AISTATS</span>
+                <span class="publication-rating">CORE A</span><span class="publication-rating">CCF C</span>
+                <a class="tag" href="https://arxiv.org/abs/2410.09375" target="_blank" rel="noopener noreferrer">Paper</a>
+              </div>
+            </div>
+          </li>
+          <li class="publication-item">
+            <span class="publication-year">2025</span>
+            <div class="publication-main">
+              <strong>HSR-Enhanced Sparse Attention Acceleration</strong>
+              <div class="publication-meta">
+                <span class="publication-venue">CPAL</span>
+                <a class="tag" href="https://arxiv.org/abs/2410.10165" target="_blank" rel="noopener noreferrer">Paper</a>
+                <a class="tag" href="data/HSR_Poster.pdf" target="_blank" rel="noopener noreferrer">Poster</a>
+              </div>
+            </div>
+          </li>
+          <li class="publication-item">
+            <span class="publication-year">2025</span>
+            <div class="publication-main">
+              <strong>Differential Privacy Mechanisms in Neural Tangent Kernel Regression</strong>
+              <div class="publication-meta">
+                <span class="publication-venue">WACV</span>
+                <span class="publication-rating">CORE A</span><span class="publication-rating">CCF C</span>
+                <a class="tag" href="https://arxiv.org/abs/2407.13621" target="_blank" rel="noopener noreferrer">Paper</a>
+                <a class="tag" href="https://github.com/JamesSand/DP-NTK-Regression" target="_blank" rel="noopener noreferrer">Code</a>
+              </div>
+            </div>
+          </li>
+          <li class="publication-item">
+            <span class="publication-year">2024</span>
+            <div class="publication-main">
+              <strong>TokenCompose: Text-to-Image Diffusion with Token-level Supervision</strong>
+              <div class="publication-meta">
+                <span class="publication-venue">CVPR</span>
+                <span class="publication-rating">CORE A*</span><span class="publication-rating">CCF A</span>
+                <a class="tag" href="https://openaccess.thecvf.com/content/CVPR2024/papers/Wang_TokenCompose_Text-to-Image_Diffusion_with_Token-level_Supervision_CVPR_2024_paper.pdf" target="_blank" rel="noopener noreferrer">Paper</a>
+                <a class="tag" href="https://mlpc-ucsd.github.io/TokenCompose/" target="_blank" rel="noopener noreferrer">Project</a>
+                <a class="tag" href="https://github.com/mlpc-ucsd/TokenCompose" target="_blank" rel="noopener noreferrer">Code</a>
+              </div>
+            </div>
+          </li>
+          <li class="publication-item">
+            <span class="publication-year">2024</span>
+            <div class="publication-main">
+              <strong>Dolfin: Diffusion Layout Transformers without Autoencoder</strong>
+              <div class="publication-meta">
+                <span class="publication-venue">ECCV</span>
+                <span class="publication-rating">CORE A*</span><span class="publication-rating">CCF B</span>
+                <a class="tag" href="https://arxiv.org/abs/2310.16305" target="_blank" rel="noopener noreferrer">Paper</a>
+              </div>
+            </div>
+          </li>
+          <li class="publication-item">
+            <span class="publication-year">2024</span>
+            <div class="publication-main">
+              <strong>Multi-Layer Transformers Gradient Can be Approximated in Almost Linear Time</strong>
+              <div class="publication-meta">
+                <span class="publication-venue">OPT Workshop @ NeurIPS</span>
+                <a class="tag" href="https://arxiv.org/abs/2408.13233" target="_blank" rel="noopener noreferrer">Paper</a>
+                <a class="tag" href="data/MultiLayer_Poster_NeurIPS2024.pdf" target="_blank" rel="noopener noreferrer">Poster</a>
+                <a class="tag" href="https://github.com/JamesSand/MultiLayer" target="_blank" rel="noopener noreferrer">Code</a>
+              </div>
+            </div>
+          </li>
+          <li class="publication-item">
+            <span class="publication-year">2024</span>
+            <div class="publication-main">
+              <strong>OmniControlNet: Dual-stage Integration for Conditional Image Generation</strong>
+              <div class="publication-meta">
+                <span class="publication-venue">GCV Workshop @ CVPR</span>
+                <a class="tag" href="https://openaccess.thecvf.com/content/CVPR2024W/GCV/papers/Wang_OmniControlNet_Dual-stage_Integration_for_Conditional_Image_Generation_CVPRW_2024_paper.pdf" target="_blank" rel="noopener noreferrer">Paper</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <p class="section-note"><span class="en">See my <a href="https://scholar.google.com/citations?user=eAObdYgAAAAJ">Google Scholar profile</a> for the complete list.</span><span class="zh">完整论文列表见我的 <a href="https://scholar.google.com/citations?user=eAObdYgAAAAJ">Google Scholar 主页</a>。</span></p>
+      </section>
+
+      <!-- Selected Talks & Posters -->
+      <section class="container content-section">
+        <h2 id="selected-talks"><span class="en">Selected Talks &amp; Posters</span><span class="zh">报告与海报</span></h2>
+        <ul class="talk-list">
+          <li>
+            <strong>Understanding and Optimizing RLVR through Model Geometry</strong>
+            <span class="small">IFML Fall Symposium 2026 — Austin, Texas · October 2026</span>
+          </li>
+          <li>
+            <strong>HSR-Enhanced Sparse Attention Acceleration</strong>
+            <span class="small">CPAL 2025 · <a href="data/HSR_Poster.pdf" target="_blank" rel="noopener noreferrer">poster</a></span>
+          </li>
+          <li>
+            <strong>Multi-Layer Transformers Gradient Can be Approximated in Almost Linear Time</strong>
+            <span class="small">OPT Workshop @ NeurIPS 2024 · <a href="data/MultiLayer_Poster_NeurIPS2024.pdf" target="_blank" rel="noopener noreferrer">poster</a></span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Selected Awards -->
+      <section class="container content-section">
+        <h2 id="selected-awards"><span class="en">Selected Awards</span><span class="zh">荣誉奖项</span></h2>
+        <ul class="award-list">
+          <li><span class="award-period">[2024]</span> <span class="award-title"><span class="en">Comprehensive Scholarship (Top 20%), Tsinghua University</span><span class="zh">综合奖学金（前 20%），清华大学</span></span></li>
+          <li><span class="award-period">[2023]</span> <span class="award-title"><span class="en">Comprehensive Scholarship (Top 20%), Tsinghua University</span><span class="zh">综合奖学金（前 20%），清华大学</span></span></li>
+        </ul>
+
+        <div class="visitor-map">
+          <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=hzg46Gqr37YDk2f7GAOl0s5KuZfl82QxcxigzUVPyDc&cl=ffffff&w=a"></script>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <strong><span class="en">Zhizhou Sha</span><span class="zh">沙之洲</span></strong>
+          <div class="small"><span class="en">LLM post-training, reinforcement learning, and quantization.</span><span class="zh">大模型后训练、强化学习与量化。</span></div>
+          <div class="small footer-copy"><span class="en">© 2026 Zhizhou Sha · All rights reserved.</span><span class="zh">© 2026 沙之洲 · 保留所有权利。</span></div>
+        </div>
+        <div class="footer-social" aria-label="Social links">
+          <a class="social-icon-link md" href="https://github.com/JamesSand" aria-label="GitHub" title="GitHub" target="_blank" rel="noopener noreferrer"><svg width="20" height="20"><use href="#i-github"/></svg></a>
+          <a class="social-icon-link md" href="https://scholar.google.com/citations?user=eAObdYgAAAAJ" aria-label="Google Scholar" title="Google Scholar" target="_blank" rel="noopener noreferrer"><svg width="20" height="20"><use href="#i-scholar"/></svg></a>
+          <a class="social-icon-link md" href="https://www.linkedin.com/in/zhizhou-sha-017403280/" aria-label="LinkedIn" title="LinkedIn" target="_blank" rel="noopener noreferrer"><svg width="19" height="19"><use href="#i-linkedin"/></svg></a>
+          <a class="social-icon-link md" href="data/wechat.jpg" aria-label="WeChat" title="WeChat" target="_blank" rel="noopener noreferrer"><svg width="20" height="20"><use href="#i-wechat"/></svg></a>
+          <a class="social-icon-link md" href="mailto:shazhizhou0@gmail.com" aria-label="Email" title="Email"><svg width="20" height="20"><use href="#i-mail"/></svg></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="site.js"></script>
   </body>
-
-  <script>
-    // set pbrs h1 video play speed to 2.0
-    let vid = document.getElementById("pbrs_h1_video");
-    vid.playbackRate = 2.0;
-  </script> 
-
 </html>
