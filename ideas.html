@@ -101,6 +101,36 @@
               </div>
             </div>
           </li>
+          <li class="news-item">
+            <span class="news-date">2026/11</span>
+            <div>
+              <span class="news-badge news-badge-event">Exploring</span>
+              <div class="news-body">
+                <strong><span class="en">RL Training Dynamics on Low-Precision Models</span><span class="zh">低精度模型上的 RL 训练动力学</span></strong>
+                <p class="idea-text">
+                  <span class="en">In The Path Not Taken, we gave a parameter-space account of RL training: RL learns off the principal directions in weight space, and numerical precision hides many of its small updates. I want to continue this line on low-precision models, where precision is no longer a side effect: small updates reach the deployed weights only as discrete jumps.</span>
+                  <span class="zh">在 The Path Not Taken 里，我们从参数空间解释了 RL 训练：RL 在权重空间中沿非主方向学习，而数值精度遮住了很多微小的更新。我想在低精度模型上继续这条线。到了这里，精度不再是副作用：微小的更新只能以离散跳变的形式落到部署的权重上。</span>
+                </p>
+                <p class="idea-text">
+                  <span class="en">This matters because RL training is sensitive to bias and noise. The model generates its own data, and signed advantages make each update a difference between two large terms, so terms unrelated to the reward can steer training. Existing results also point in different directions: QeRL finds that quantization noise raises policy entropy and helps exploration, while work on MXFP4 finds that quantization error severely degrades accuracy.</span>
+                  <span class="zh">这件事重要，是因为 RL 训练对偏置和噪声很敏感。模型自己生成训练数据，带符号的优势又让每步更新变成两个大项之差，所以和 reward 无关的项也可能左右训练。已有结果的方向也不一致：QeRL 发现量化噪声会提高策略熵、有助于探索，而针对 MXFP4 的工作发现量化误差会严重降低准确率。</span>
+                </p>
+                <p class="idea-text">
+                  <span class="en">Three questions are open. Which reward-irrelevant biases does quantization amplify, and is that amplification general? In a direction with zero expected gradient, do discrete updates turn noise into lasting behavior change, or can later updates undo it? How do these effects change with bit width?</span>
+                  <span class="zh">现在有三个开放问题：量化放大的是哪些和 reward 无关的偏置，这种放大是否普遍成立？在期望梯度为零的方向上，离散更新会不会把噪声变成持久的行为变化，后续更新还能不能撤销它？这些效应随位宽怎样变化？</span>
+                </p>
+                <p class="idea-papers-title"><span class="en">Key papers</span><span class="zh">关键论文</span></p>
+                <ul class="idea-papers">
+                  <li><a href="https://arxiv.org/abs/2511.08567" target="_blank" rel="noopener noreferrer">The Path Not Taken: RLVR Provably Learns Off the Principals</a> (Zhu et al., 2025)<span class="idea-paper-note"><span class="en"> — the starting point for this line of work.</span><span class="zh"> — 这条线的起点。</span></span></li>
+                  <li><a href="https://arxiv.org/abs/2510.11696" target="_blank" rel="noopener noreferrer">QeRL</a> (Huang et al., ICLR 2026)<span class="idea-paper-note"><span class="en"> — quantization noise raises policy entropy and helps exploration.</span><span class="zh"> — 量化噪声提高策略熵，有助于探索。</span></span></li>
+                  <li><a href="https://arxiv.org/abs/2605.20402" target="_blank" rel="noopener noreferrer">Decomposing MXFP4 Quantization Error for LLM Reinforcement Learning</a> (Li et al., 2026)<span class="idea-paper-note"><span class="en"> — splits quantization error into bias, deadzone and an irreducible floor.</span><span class="zh"> — 把量化误差拆成偏置、死区和不可消除的下限。</span></span></li>
+                  <li><a href="https://arxiv.org/abs/2203.11086" target="_blank" rel="noopener noreferrer">Overcoming Oscillations in Quantization-Aware Training</a> (Nagel et al., ICML 2022)<span class="idea-paper-note"><span class="en"> — quantized weights can oscillate between two grid points.</span><span class="zh"> — 量化权重可能在两个格点之间来回振荡。</span></span></li>
+                  <li><a href="https://arxiv.org/abs/2510.11370" target="_blank" rel="noopener noreferrer">Stabilizing MoE Reinforcement Learning by Aligning Training and Inference Routers</a> (Ma et al., 2025)<span class="idea-paper-note"><span class="en"> — discrete routing decisions can make RL training collapse.</span><span class="zh"> — 离散的路由决策可能让 RL 训练崩溃。</span></span></li>
+                  <li><a href="https://arxiv.org/abs/2609.20807" target="_blank" rel="noopener noreferrer">Score Centering Stabilizes Off-policy Reinforcement Learning</a> (Marek &amp; Ryabinin, 2026)<span class="idea-paper-note"><span class="en"> — traces RL instability under training-inference mismatch to drift.</span><span class="zh"> — 把训练-推理失配下的 RL 不稳定归因于 drift。</span></span></li>
+                </ul>
+              </div>
+            </div>
+          </li>
         </ul>
       </section>
     </main>
