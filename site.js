@@ -2,6 +2,8 @@
 (function () {
   const root = document.documentElement;
   const buttons = document.querySelectorAll("[data-set-lang]");
+  const titleEn = document.title;
+  const titleZh = document.body.dataset.titleZh || titleEn;
 
   function readStored() {
     try {
@@ -21,7 +23,7 @@
 
   function setLang(lang) {
     root.lang = lang === "zh" ? "zh-CN" : "en";
-    document.title = lang === "zh" ? "沙之洲" : "Zhizhou Sha";
+    document.title = lang === "zh" ? titleZh : titleEn;
     buttons.forEach((button) => {
       button.setAttribute("aria-pressed", String(button.dataset.setLang === lang));
     });

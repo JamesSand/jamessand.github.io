@@ -460,6 +460,22 @@ h3 {
   margin: 18px 0 6px;
 }
 
+/* Standalone pages */
+.page-intro {
+  padding: 46px 0 22px;
+}
+
+.page-intro p {
+  max-width: 860px;
+  margin: 14px 0 0;
+  color: var(--muted);
+}
+
+.content-section .idea-empty {
+  margin: 0;
+  color: var(--subtle);
+}
+
 /* Sections */
 .content-section {
   padding: 30px 0;
