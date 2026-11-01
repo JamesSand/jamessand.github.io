@@ -69,22 +69,39 @@
 
       <section class="container content-section">
         <ul class="news-list">
-          <!-- Newest first. Copy this block for each idea. Delete the idea-empty line below once the first idea is in.
-               Status badges: news-badge-event = Exploring, news-badge-honor = Seeking Collab, news-badge-paper = Done.
+          <!-- Newest first. Copy an entry for each idea. A short idea can use one .idea-text paragraph and drop the paper list.
+               Status badges: news-badge-event = Exploring, news-badge-honor = Seeking Collab, news-badge-paper = Done. -->
           <li class="news-item">
             <span class="news-date">2026/11</span>
             <div>
               <span class="news-badge news-badge-event">Exploring</span>
-              <span class="news-body">
-                <strong>Idea title</strong><br>
-                <span class="en">One or two sentences on the open question.</span>
-                <span class="zh">用一两句话写清楚开放问题。</span>
-              </span>
+              <div class="news-body">
+                <strong><span class="en">RL Post-Training of Ternary Models as Discrete Optimization</span><span class="zh">把三值模型的 RL 后训练当作离散优化问题</span></strong>
+                <p class="idea-text">
+                  <span class="en">A ternary model stores each weight as −1, 0 or +1 times a per-row scale, so post-training it is a large-scale discrete optimization problem: which weights should change, and to which value? The standard approach keeps a hidden full-precision copy of every weight, trains it through a straight-through estimator, and rounds it in each forward pass. That copy and its optimizer state take far more memory than the 2-bit model itself, and most small updates never change a deployed weight.</span>
+                  <span class="zh">三值模型的每个权重只能取 −1、0 或 +1，再乘一个逐行的 scale，所以它的后训练是一个大规模离散优化问题：该改哪些权重，改成哪个值？常规做法是给每个权重维护一份隐藏的全精度副本，用 straight-through estimator 训练，前向时再取整。这份副本和优化器状态占的内存远大于 2-bit 的模型本身，而且大部分微小更新改变不了部署的权重。</span>
+                </p>
+                <p class="idea-text">
+                  <span class="en">I am exploring zeroth-order search directly in the deployed format: candidate code edits are scored by forward rollouts and task rewards alone, with no full-precision copy and no backpropagation through the model.</span>
+                  <span class="zh">我想探索直接在部署格式上做零阶搜索：候选的码修改只靠前向 rollout 和任务 reward 打分，不需要全精度副本，也不需要对模型反传。</span>
+                </p>
+                <p class="idea-text">
+                  <span class="en">Three questions are open. Which parts of the network deserve the search budget? How many codes should change at each step? How can we confirm that an edit is a real improvement and not rollout noise? The goal is to reach the same quality at a lower total rollout cost than evolution strategies on quantized weights.</span>
+                  <span class="zh">现在有三个开放问题：搜索预算该分给网络的哪些部分？每一步该改多少个码？怎么确认一次修改是真的变好，而不是 rollout 噪声？目标是在同样的质量下，总 rollout 成本低于量化权重上的进化策略。</span>
+                </p>
+                <p class="idea-papers-title"><span class="en">Key papers</span><span class="zh">关键论文</span></p>
+                <ul class="idea-papers">
+                  <li><a href="https://arxiv.org/abs/2504.12285" target="_blank" rel="noopener noreferrer">BitNet b1.58 2B4T Technical Report</a> (Ma et al., 2025)<span class="idea-paper-note"><span class="en"> — the ternary LLM that made this format practical.</span><span class="zh"> — 让三值大模型走向实用的代表工作。</span></span></li>
+                  <li><a href="https://arxiv.org/abs/1705.09283" target="_blank" rel="noopener noreferrer">GXNOR-Net</a> (Deng et al., Neural Networks 2018)<span class="idea-paper-note"><span class="en"> — direct transitions between ternary states, without full-precision memory.</span><span class="zh"> — 不用全精度内存，直接在三值状态之间转移。</span></span></li>
+                  <li><a href="https://arxiv.org/abs/1906.02107" target="_blank" rel="noopener noreferrer">Latent Weights Do Not Exist</a> (Helwegen et al., NeurIPS 2019)<span class="idea-paper-note"><span class="en"> — Bop flips binary weights directly, with no latent weights.</span><span class="zh"> — Bop 不用 latent 权重，直接翻转二值权重。</span></span></li>
+                  <li><a href="https://arxiv.org/abs/2405.14852" target="_blank" rel="noopener noreferrer">PV-Tuning</a> (Malinovskii et al., NeurIPS 2024)<span class="idea-paper-note"><span class="en"> — alternates discrete and continuous updates for LLM compression.</span><span class="zh"> — 在大模型压缩中交替做离散更新和连续更新。</span></span></li>
+                  <li><a href="https://arxiv.org/abs/2406.02913" target="_blank" rel="noopener noreferrer">Zeroth-Order Fine-Tuning of LLMs with Extreme Sparsity</a> (Guo et al., 2024)<span class="idea-paper-note"><span class="en"> — Fisher-informed coordinate selection for sparse zeroth-order fine-tuning.</span><span class="zh"> — 用 Fisher 选坐标，做稀疏的零阶微调。</span></span></li>
+                  <li><a href="https://arxiv.org/abs/2602.03120" target="_blank" rel="noopener noreferrer">Quantized Evolution Strategies</a> (Xu et al., 2026)<span class="idea-paper-note"><span class="en"> — reward-based search in quantized weight space, and the direct baseline here.</span><span class="zh"> — 在量化权重空间上用 reward 搜索，是这里最直接的 baseline。</span></span></li>
+                </ul>
+              </div>
             </div>
           </li>
-          -->
         </ul>
-        <p class="idea-empty"><span class="en">Ideas are coming soon.</span><span class="zh">想法整理中，很快放上来。</span></p>
       </section>
     </main>
 

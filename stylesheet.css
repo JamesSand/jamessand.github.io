@@ -822,6 +822,30 @@ h3 {
   line-height: 1.55;
 }
 
+.news-body .idea-text {
+  margin: 6px 0 0;
+  color: var(--ink);
+}
+
+.news-body .idea-papers-title {
+  margin: 12px 0 0;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.idea-papers {
+  margin: 4px 0 2px;
+  padding-left: 18px;
+}
+
+.idea-papers li {
+  margin-top: 3px;
+}
+
+.idea-papers .idea-paper-note {
+  color: var(--muted);
+}
+
 .news-links {
   grid-column: 2;
   display: inline-flex;
