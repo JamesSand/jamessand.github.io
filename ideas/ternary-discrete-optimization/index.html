@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!-- One idea, one page. To add an idea: copy this folder, rename it (the name becomes the URL), edit the text and the
+     Previous/Next links, then add an entry to ../index.html. -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>RL Post-Training of Ternary Models as Discrete Optimization | Zhizhou Sha</title>
+
+    <meta name="author" content="Zhizhou Sha">
+    <meta name="description" content="Can rollout rewards search directly over the deployed codes of a ternary model, without a hidden full-precision copy?">
+    <link rel="shortcut icon" href="../../images/favicon/one_piece.jpg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,500;6..72,700&display=swap">
+    <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+  </head>
+
+  <body id="top" data-title-zh="把三值模型的 RL 后训练当作离散优化问题 | 沙之洲">
+    <!-- Icons -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+      <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55v-1.93c-3.2.7-3.87-1.54-3.87-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.41-5.26 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.66.79.55A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></symbol>
+      <symbol id="i-scholar" viewBox="0 0 24 24"><path fill="currentColor" d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></symbol>
+      <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></symbol>
+      <symbol id="i-wechat" viewBox="0 0 24 24"><path fill="currentColor" d="M9.2 3.5C4.9 3.5 1.4 6.4 1.4 10c0 2 1.1 3.8 2.9 5l-.7 2.3 2.6-1.4c.9.3 1.9.4 3 .4h.5a5.6 5.6 0 0 1-.2-1.5c0-3.5 3.3-6.2 7.4-6.2h.5C16.8 5.5 13.3 3.5 9.2 3.5zM6.7 8.9a1 1 0 1 1 0-2.1 1 1 0 0 1 0 2.1zm5 0a1 1 0 1 1 0-2.1 1 1 0 0 1 0 2.1z"/><path fill="currentColor" d="M22.6 14.8c0-2.9-2.8-5.2-6.3-5.2s-6.3 2.3-6.3 5.2 2.8 5.2 6.3 5.2c.8 0 1.5-.1 2.2-.3l2 1.1-.5-1.8c1.6-1 2.6-2.5 2.6-4.2zm-8.3-.8a.85.85 0 1 1 0-1.7.85.85 0 0 1 0 1.7zm4.1 0a.85.85 0 1 1 0-1.7.85.85 0 0 1 0 1.7z"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 6.5A1.5 1.5 0 0 1 4.5 5h15A1.5 1.5 0 0 1 21 6.5v11a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.5v-11zM3.5 6.5 12 13l8.5-6.5"/></symbol>
+      <symbol id="i-list" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8 6h13M8 12h13M8 18h13M3.5 6h.01M3.5 12h.01M3.5 18h.01"/></symbol>
+      <symbol id="i-pen" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></symbol>
+    </svg>
+
+    <!-- Header -->
+    <header class="site-header">
+      <nav class="container nav" aria-label="Primary navigation">
+        <a class="brand" href="../../index.html" aria-label="Zhizhou Sha home">
+          <span class="brand-mark" aria-hidden="true"><img src="../../images/favicon/one_piece.jpg" alt="" width="38" height="38"></span>
+          <span class="brand-text"><span class="en">Zhizhou Sha</span><span class="zh">沙之洲</span></span>
+        </a>
+        <div class="nav-end">
+          <div class="header-social" aria-label="Social links">
+            <a class="social-icon-link" href="https://github.com/JamesSand" aria-label="GitHub" title="GitHub" target="_blank" rel="noopener noreferrer"><svg width="18" height="18"><use href="#i-github"/></svg></a>
+            <a class="social-icon-link" href="https://scholar.google.com/citations?user=eAObdYgAAAAJ" aria-label="Google Scholar" title="Google Scholar" target="_blank" rel="noopener noreferrer"><svg width="18" height="18"><use href="#i-scholar"/></svg></a>
+            <a class="social-icon-link" href="https://www.linkedin.com/in/zhizhou-sha-017403280/" aria-label="LinkedIn" title="LinkedIn" target="_blank" rel="noopener noreferrer"><svg width="17" height="17"><use href="#i-linkedin"/></svg></a>
+            <a class="social-icon-link" href="../../data/wechat.jpg" aria-label="WeChat" title="WeChat" target="_blank" rel="noopener noreferrer"><svg width="18" height="18"><use href="#i-wechat"/></svg></a>
+            <a class="social-icon-link" href="mailto:shazhizhou0@gmail.com" aria-label="Email" title="Email"><svg width="18" height="18"><use href="#i-mail"/></svg></a>
+          </div>
+          <div class="language-switch" role="group" aria-label="Language" translate="no">
+            <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
+            <button type="button" data-set-lang="zh" aria-pressed="false">中文</button>
+          </div>
+          <div class="nav-links">
+            <a href="../../index.html"><span class="en">Home</span><span class="zh">首页</span></a>
+            <a href="../../index.html#research-highlights"><span class="en">Research</span><span class="zh">研究</span></a>
+            <a href="../" class="is-current"><span class="en">Ideas</span><span class="zh">想法</span></a>
+            <a href="../../index.html#selected-publications"><span class="en">Publication</span><span class="zh">论文</span></a>
+            <a href="../../index.html#work"><span class="en">Experience</span><span class="zh">经历</span></a>
+            <a href="../../index.html#recent-news"><span class="en">Recent News</span><span class="zh">近期动态</span></a>
+            <a href="https://jamessand.github.io/blog/" target="_blank" rel="noopener noreferrer"><span class="en">Blog</span><span class="zh">博客</span></a>
+            <a href="../../data/zhizhousha-ut-austin-cs-phd.pdf" target="_blank" rel="noopener noreferrer"><span class="en">CV</span><span class="zh">简历</span><span class="nav-external" aria-hidden="true"> ↗</span></a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Outline -->
+    <nav class="page-toc" aria-label="Page outline" data-heading-selector=".idea-post-body h2">
+      <div class="page-toc-handle" aria-hidden="true">
+        <span class="page-toc-handle-icon">☰</span>
+        <span class="page-toc-handle-label">Outline</span>
+      </div>
+      <div class="page-toc-panel">
+        <p class="page-toc-title"><span class="en">On this page</span><span class="zh">本页目录</span></p>
+        <ul class="page-toc-list"></ul>
+      </div>
+    </nav>
+
+    <main class="idea-page">
+      <div class="container idea-layout">
+        <aside class="idea-sidebar">
+          <div class="idea-card">
+            <div class="idea-avatar"><img src="../../images/profile.jpg" alt="Zhizhou Sha"></div>
+            <h2 class="idea-author"><span class="en">Zhizhou Sha</span><span class="zh">沙之洲</span></h2>
+            <p class="idea-author-tagline"><span class="en">Research Ideas</span><span class="zh">研究想法</span></p>
+            <nav class="idea-sidebar-nav" aria-label="Ideas navigation">
+              <a href="../">
+                <span class="idea-nav-icon" aria-hidden="true"><svg width="18" height="18"><use href="#i-list"/></svg></span>
+                <span class="en">All Ideas</span><span class="zh">全部想法</span>
+              </a>
+              <a href="https://jamessand.github.io/blog/">
+                <span class="idea-nav-icon" aria-hidden="true"><svg width="18" height="18"><use href="#i-pen"/></svg></span>
+                <span class="en">Blog</span><span class="zh">博客</span>
+              </a>
+            </nav>
+          </div>
+        </aside>
+
+        <article class="idea-post">
+          <header class="idea-post-header">
+            <p class="idea-post-meta">
+              <time datetime="2026-11-01"><span class="en">November 1, 2026</span><span class="zh">2026 年 11 月 1 日</span></time>
+              <span class="news-badge news-badge-event">Exploring</span>
+            </p>
+            <h1><span class="en">RL Post-Training of Ternary Models as Discrete Optimization</span><span class="zh">把三值模型的 RL 后训练当作离散优化问题</span></h1>
+          </header>
+          <div class="idea-post-body">
+            <h2 id="problem"><span class="en">The Problem</span><span class="zh">问题</span></h2>
+            <p>
+              <span class="en">A ternary model stores each weight as −1, 0 or +1 times a per-row scale, so post-training it is a large-scale discrete optimization problem: which weights should change, and to which value? The standard approach keeps a hidden full-precision copy of every weight, trains it through a straight-through estimator, and rounds it in each forward pass. That copy and its optimizer state take far more memory than the 2-bit model itself, and most small updates never change a deployed weight.</span>
+              <span class="zh">三值模型的每个权重只能取 −1、0 或 +1，再乘一个逐行的 scale，所以它的后训练是一个大规模离散优化问题：该改哪些权重，改成哪个值？常规做法是给每个权重维护一份隐藏的全精度副本，用 straight-through estimator 训练，前向时再取整。这份副本和优化器状态占的内存远大于 2-bit 的模型本身，而且大部分微小更新改变不了部署的权重。</span>
+            </p>
+            <h2 id="idea"><span class="en">The Idea</span><span class="zh">想法</span></h2>
+            <p>
+              <span class="en">I am exploring zeroth-order search directly in the deployed format: candidate code edits are scored by forward rollouts and task rewards alone, with no full-precision copy and no backpropagation through the model.</span>
+              <span class="zh">我想探索直接在部署格式上做零阶搜索：候选的码修改只靠前向 rollout 和任务 reward 打分，不需要全精度副本，也不需要对模型反传。</span>
+            </p>
+            <h2 id="open-questions"><span class="en">Open Questions</span><span class="zh">开放问题</span></h2>
+            <p>
+              <span class="en">Three questions are open. Which parts of the network deserve the search budget? How many codes should change at each step? How can we confirm that an edit is a real improvement and not rollout noise? The goal is to reach the same quality at a lower total rollout cost than evolution strategies on quantized weights.</span>
+              <span class="zh">现在有三个开放问题：搜索预算该分给网络的哪些部分？每一步该改多少个码？怎么确认一次修改是真的变好，而不是 rollout 噪声？目标是在同样的质量下，总 rollout 成本低于量化权重上的进化策略。</span>
+            </p>
+            <h2 id="key-papers"><span class="en">Key Papers</span><span class="zh">关键论文</span></h2>
+            <ul>
+              <li><a href="https://arxiv.org/abs/2504.12285" target="_blank" rel="noopener noreferrer">BitNet b1.58 2B4T Technical Report</a> (Ma et al., 2025)<span class="idea-paper-note"><span class="en"> — the ternary LLM that made this format practical.</span><span class="zh"> — 让三值大模型走向实用的代表工作。</span></span></li>
+              <li><a href="https://arxiv.org/abs/1705.09283" target="_blank" rel="noopener noreferrer">GXNOR-Net</a> (Deng et al., Neural Networks 2018)<span class="idea-paper-note"><span class="en"> — direct transitions between ternary states, without full-precision memory.</span><span class="zh"> — 不用全精度内存，直接在三值状态之间转移。</span></span></li>
+              <li><a href="https://arxiv.org/abs/1906.02107" target="_blank" rel="noopener noreferrer">Latent Weights Do Not Exist</a> (Helwegen et al., NeurIPS 2019)<span class="idea-paper-note"><span class="en"> — Bop flips binary weights directly, with no latent weights.</span><span class="zh"> — Bop 不用 latent 权重，直接翻转二值权重。</span></span></li>
+              <li><a href="https://arxiv.org/abs/2405.14852" target="_blank" rel="noopener noreferrer">PV-Tuning</a> (Malinovskii et al., NeurIPS 2024)<span class="idea-paper-note"><span class="en"> — alternates discrete and continuous updates for LLM compression.</span><span class="zh"> — 在大模型压缩中交替做离散更新和连续更新。</span></span></li>
+              <li><a href="https://arxiv.org/abs/2406.02913" target="_blank" rel="noopener noreferrer">Zeroth-Order Fine-Tuning of LLMs with Extreme Sparsity</a> (Guo et al., 2024)<span class="idea-paper-note"><span class="en"> — Fisher-informed coordinate selection for sparse zeroth-order fine-tuning.</span><span class="zh"> — 用 Fisher 选坐标，做稀疏的零阶微调。</span></span></li>
+              <li><a href="https://arxiv.org/abs/2602.03120" target="_blank" rel="noopener noreferrer">Quantized Evolution Strategies</a> (Xu et al., 2026)<span class="idea-paper-note"><span class="en"> — reward-based search in quantized weight space, and the direct baseline here.</span><span class="zh"> — 在量化权重空间上用 reward 搜索，是这里最直接的 baseline。</span></span></li>
+            </ul>
+          </div>
+          <footer class="idea-post-footer">
+            <nav class="idea-post-nav" aria-label="More ideas">
+              <a class="idea-post-nav-link idea-post-nav-next" href="../low-precision-rl-dynamics/">
+                <span class="idea-post-nav-label"><span class="en">Next idea</span><span class="zh">下一条</span></span>
+                <span class="idea-post-nav-title"><span class="en">RL Training Dynamics on Low-Precision Models</span><span class="zh">低精度模型上的 RL 训练动力学</span></span>
+              </a>
+            </nav>
+          </footer>
+        </article>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <strong><span class="en">Zhizhou Sha</span><span class="zh">沙之洲</span></strong>
+          <div class="small"><span class="en">LLM post-training, reinforcement learning, and quantization.</span><span class="zh">大模型后训练、强化学习与量化。</span></div>
+          <div class="small footer-copy"><span class="en">© 2026 Zhizhou Sha · All rights reserved.</span><span class="zh">© 2026 沙之洲 · 保留所有权利。</span></div>
+        </div>
+        <div class="footer-social" aria-label="Social links">
+          <a class="social-icon-link md" href="https://github.com/JamesSand" aria-label="GitHub" title="GitHub" target="_blank" rel="noopener noreferrer"><svg width="20" height="20"><use href="#i-github"/></svg></a>
+          <a class="social-icon-link md" href="https://scholar.google.com/citations?user=eAObdYgAAAAJ" aria-label="Google Scholar" title="Google Scholar" target="_blank" rel="noopener noreferrer"><svg width="20" height="20"><use href="#i-scholar"/></svg></a>
+          <a class="social-icon-link md" href="https://www.linkedin.com/in/zhizhou-sha-017403280/" aria-label="LinkedIn" title="LinkedIn" target="_blank" rel="noopener noreferrer"><svg width="19" height="19"><use href="#i-linkedin"/></svg></a>
+          <a class="social-icon-link md" href="../../data/wechat.jpg" aria-label="WeChat" title="WeChat" target="_blank" rel="noopener noreferrer"><svg width="20" height="20"><use href="#i-wechat"/></svg></a>
+          <a class="social-icon-link md" href="mailto:shazhizhou0@gmail.com" aria-label="Email" title="Email"><svg width="20" height="20"><use href="#i-mail"/></svg></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../../site.js"></script>
+  </body>
+</html>
